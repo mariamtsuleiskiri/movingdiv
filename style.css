@@ -1,0 +1,31 @@
+body,html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+.border{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px black;
+    width: 500x;
+    height: 130px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 250px;
+}
+.moving{
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    animation: moveLeftToEnd 8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+@keyframes moveLeftToEnd{
+    0%{
+        left:-50px;
+    }
+    100%{
+        left: calc(100% - 50px);
+    }
+}
